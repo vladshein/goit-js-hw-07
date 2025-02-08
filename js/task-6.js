@@ -9,6 +9,7 @@ function createBoxes(amount) {
     return "Wrong amount";
   }
   const baseSize = 30;
+  boxes.innerHTML = "";
 
   for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
