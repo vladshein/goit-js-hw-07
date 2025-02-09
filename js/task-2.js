@@ -18,6 +18,8 @@ const images = [
 ];
 
 const galleryUl = document.querySelector(".gallery");
+let fragment = document.createDocumentFragment();
+
 for (const image of images) {
   const element = document.createElement("li");
   element.classList.add("gallery-item");
@@ -28,7 +30,8 @@ for (const image of images) {
   imageLi.alt = image.alt;
 
   element.append(imageLi);
-  galleryUl.append(element);
+  fragment.append(element);
 }
 
+galleryUl.appendChild(fragment);
 console.log(galleryUl);

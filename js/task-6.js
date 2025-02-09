@@ -10,6 +10,7 @@ function createBoxes(amount) {
   }
   const baseSize = 30;
   boxes.innerHTML = "";
+  let fragment = document.createDocumentFragment();
 
   for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
@@ -18,8 +19,9 @@ function createBoxes(amount) {
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.textContent = i + 1;
-    boxes.appendChild(box);
+    fragment.appendChild(box);
   }
+  boxes.appendChild(fragment);
 }
 
 function getInputAndCreateBoxes() {
